@@ -22,13 +22,13 @@ const createObjectStoreOrder = db => {
 
 const DBVERSION = 1;
 const DBNAME = 'luckydraw';
-// 数据库：IDBDatabase 对象
-// 对象仓库：IDBObjectStore 对象
-// 索引： IDBIndex 对象
-// 事务： IDBTransaction 对象
-// 操作请求：IDBRequest 对象
-// 指针： IDBCursor 对象
-// 主键集合：IDBKeyRange 对象
+// 數據庫：IDBDatabase 對象
+// 對象倉庫：IDBObjectStore 對象
+// 索引： IDBIndex 對象
+// 事務： IDBTransaction 對象
+// 操作請求：IDBRequest 對象
+// 指針： IDBCursor 對象
+// 主鍵集合：IDBKeyRange 對象
 let db;
 class LuckydrawIndecDB {
   constructor() {
@@ -169,13 +169,13 @@ class LuckydrawIndecDB {
   };
   InitIndexedDB = () => {
     const DBOpenRequest = window.indexedDB.open(DBNAME, DBVERSION);
-    // 数据库打开失败
+    // 數據庫打開失敗
     DBOpenRequest.onerror = event => {
       this.onerror(event);
     };
 
     DBOpenRequest.onsuccess = () => {
-      // 存储数据结果
+      // 存儲數據結果
       db = DBOpenRequest.result;
       console.log('db-connection-success');
     };
